@@ -1,0 +1,37 @@
+{ //可參考https://www.796t.com/article.php?id=208620
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [ //執行專案包含.h標頭檔案的目錄，
+                "${workspaceFolder}/**", //此處會匹配工作檔案下的所有檔案
+                //"${workspaceRoot}",
+                "C:\\MinGW\\include"
+                //"C:\\MinGW\\lib\\gcc\\mingw32\\9.2.0\\include",
+                //"C:\\MinGW\\lib\\gcc\\mingw32\\9.2.0\\include\\c++"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+                //"__GNUC__=5",
+                //"__cdecl=__attribute__((__cdecl__))"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\g++.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x86",
+            /*"browse": {
+                "path": [
+                    "C:\\MinGW\\include"
+                ]
+            },*/
+            "compilerArgs": [
+                "-O2",
+                "-lm",
+                "-std=c++11",
+                "-static"
+            ]
+        }
+    ],
+    "version": 4
+}

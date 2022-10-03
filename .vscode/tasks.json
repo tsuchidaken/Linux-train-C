@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild", // 執行任務的是shell，也可以是
+            "label": "C/C++: g++-11 建置使用中檔案", //任務名字，注意大小寫區分，等会在launch中调用这个名字
+            "command": "C:\\MinGW\\bin\\g++.exe", // 命令是g++
+            "args": [
+                "-O2", //NTHU OJ系統參數
+                "-lm", //NTHU OJ系統參數
+                "-std=c++11", //NTHU OJ系統參數且使用c++11標準編譯
+                "-static", //NTHU OJ系統參數
+                "-g",
+                "${workspaceFolder}\\*.cpp", //當前.cpp文件名
+                //"${workspaceFolder}\\*.h", //當前.h文件名
+                //"${file}", //當前文件名
+                "-o", //對象名，不進行編譯優化
+                "${fileDirname}\\${fileBasenameNoExtension}", //當前文件名
+                //"${fileBasenameNoExtension}.exe"
+                // 所以以上部分，就是在shell中執行（假設文件名為filename.cpp）
+                // g++ filename.cpp -o filename.exe
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin\\" //編譯器的目錄
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+                // 任務分組，因為是tasks而不是task，意味著可以連著執行很多任務
+                // 在build組的任務們，可以通過在Command Palette(F1) 輸入run build task來運行
+                // 當然，如果任務分組是test，你就可以用run test task來運行
+            },
+            "problemMatcher": [
+                "$gcc" //使用gcc捕捉錯誤
+            ],
+            /*"problemMatcher": [
+                "$gcc" // 使用gcc捕獲錯誤
+            ]*/
+            "detail": "編譯器: C:\\MinGW\\bin\\g++.exe"
+        }
+    ]
+}
