@@ -10,6 +10,7 @@ int Hello() {
     cout << "Hello test-Branch" << endl;
 }
 void test2() {
+    char A = 'a';
     cout << "Hello test2" << endl;
 }
 
