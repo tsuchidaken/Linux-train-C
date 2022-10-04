@@ -3,6 +3,7 @@
 using namespace std;
 
 int foo() {
+    cout << "Foo test" << endl;
 }
 
 int Hello() {
